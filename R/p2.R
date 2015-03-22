@@ -25,6 +25,6 @@ golden_ratio = (1 + sqrt(5)) / 2
 len_fib_seq <- floor((log(upper_bound) + log(5) / 2) / log(golden_ratio))
 
 # Computes Fibonacci's sequence
-fib_seq <- sapply(2:len_fib_seq, get_fib_seq, golden_ratio = golden_ratio)
+fib_seq <- sapply(1:len_fib_seq, get_fib_seq, golden_ratio = golden_ratio)
 nr_idxs <- which(fib_seq <= upper_bound & round(fib_seq %% 2L) == 1)
-sum(fib_seq[nr_idxs])
+print(sum(fib_seq[nr_idxs]))
