@@ -6,7 +6,7 @@ This repository has my solutions to some problems of Project Euler.
 
 I used [import.io](https://import.io/) to fetch all the Project Euler 
 problems into a list, then I sorted them by their level of difficulty and 
-solved some of them in R.
+solved some in R.
 
 ## Strategy
 
