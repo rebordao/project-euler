@@ -16,7 +16,7 @@ def fib(start, end, exclude=None):
     for n in range(start, end):
         number = fib_number(n, fi)
 
-        if filter is None:
+        if exclude is None:
             yield number
         elif exclude(number) is False:
             yield number
