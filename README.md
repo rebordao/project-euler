@@ -13,6 +13,6 @@ solved some in R.
 I value simplicity, memory efficiency, speed optimization, and - as much 
 as possible - using only built-in functions.
 
-## Author
+## Authors
 
 [Antonio Rebordao](https://www.linkedin.com/in/rebordao) 2015
