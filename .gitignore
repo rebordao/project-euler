@@ -1,4 +1,5 @@
 *.html
 .DS_Store
 p495.R
+.Rhistory
 
