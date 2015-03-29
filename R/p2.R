@@ -9,12 +9,15 @@
 # By considering the terms in the Fibonacci sequence whose values do 
 # not exceed four million, find the sum of the even-valued terms.
 
+# Check the two methodogies described at 
+# http://www.mathblog.dk/project-euler-25-fibonacci-sequence-1000-digits/
+
 get_fib_seq <- function(n, golden_ratio) {
   "
   Computes Fibonacci Sequence in Closed Form.
   http://en.wikipedia.org/wiki/Fibonacci_number#Closed-form_expression
   "
-  return((golden_ratio^n - (-golden_ratio)^-n) / sqrt(5)) # Binet's formula
+  (golden_ratio^n - (-golden_ratio)^-n) / sqrt(5)) # Binet's formula
 }
 
 upper_bound <- 4e6
@@ -24,6 +27,6 @@ golden_ratio = (1 + sqrt(5)) / 2
 len_fib_seq <- floor((log(upper_bound) + log(5) / 2) / log(golden_ratio))
 
 # Computes Fibonacci's sequence
-fib_seq <- sapply(1:len_fib_seq, get_fib_seq, golden_ratio = golden_ratio)
+fib_seq <- get_fib_seq(1:33, golden_ratio)
 nr_idxs <- which(fib_seq <= upper_bound & round(fib_seq %% 2L) == 1)
 print(sum(fib_seq[nr_idxs]))
