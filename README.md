@@ -16,4 +16,4 @@ as possible - using only built-in functions.
 ## Authors
 
 - [Antonio Rebordao](https://www.linkedin.com/in/rebordao) (R solutions)
-- [Charalampos Papaloizou](https://github.com/papaloizouc) (python solutions) 
+- [Charalampos Papaloizou](https://github.com/papaloizouc) (python solutions)
