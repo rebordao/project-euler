@@ -40,5 +40,5 @@ get_multi_ord <- function(nr, base = 10L) {
   return (which(mod.bigz(pow.bigz(base, 1:nr), nr) == 1L)[1])
 }
 
-# Gets d with the longest recurring cycle
+# gets d with the longest recurring cycle
 print (which.max(sapply(1:999, get_multi_ord)))
