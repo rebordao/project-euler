@@ -35,3 +35,11 @@
 print(sum(4 * sapply(1:500, function(i) {
     4 * i^2 + i + 1
 })) + 1)
+
+# Not necessary for the solution but interesting readings:
+
+# Some theoretical results behind such type of grids
+# - http://en.wikipedia.org/wiki/Ulam_spiral
+
+# A similar reasoning, although different in its solution
+# - http://www.mathblog.dk/project-euler-28-sum-diagonals-spiral/
