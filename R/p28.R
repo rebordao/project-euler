@@ -1,5 +1,4 @@
 # 28 | Number spiral diagonals
-#
 # https://projecteuler.net/problem=28
 #
 # Starting with the number 1 and moving to the right in a

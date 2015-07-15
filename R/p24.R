@@ -1,5 +1,4 @@
 # 24 | Lexicographic permutations
-# 
 # https://projecteuler.net/problem=24
 # 
 # A permutation is an ordered arrangement of objects. 
