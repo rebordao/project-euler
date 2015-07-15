@@ -59,4 +59,4 @@ for (n in 11:98) {
   }
 }
 
-prod(ns) / prod(ds)
+print(prod(ns) / prod(ds))

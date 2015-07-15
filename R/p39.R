@@ -36,4 +36,4 @@ print(unique(sols_max))
 print(p_max)
 
 # TODO: optimise solution 
-# check http://www.mathblog.dk/project-euler-39-perimeter-right-angle-triangle/ 
+# check http://www.mathblog.dk/project-euler-39-perimeter-right-angle-triangle/
