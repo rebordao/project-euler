@@ -1,5 +1,4 @@
 # 27 | Quadratic primes
-#
 # https://projecteuler.net/problem=27
 #
 # Euler discovered the remarkable quadratic formula:
@@ -26,8 +25,10 @@
 
 library(gmp)
 
-# Quadratic formula
 quadr_form <- function(n, a, b) {
+  "
+  Quadratic formula
+  "
   return(n ^ 2 + a * n + b)
 }
 

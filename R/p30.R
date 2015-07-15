@@ -1,5 +1,4 @@
 # 30 | Digit fifth powers
-#
 # https://projecteuler.net/problem=30
 #
 # Surprisingly there are only three numbers that can be written
