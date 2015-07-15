@@ -13,16 +13,18 @@
 
 #### Get all primes below 1e6 ####
 
-# Initialises an array to store the logical indices of the prime nrs
-idxs <- !logical(1e6-1)
-idxs[1] <- F # excludes 1
-
-j <- 2L
-while (j < sqrt(length(idxs))) { # we just need to check these cases
-  idxs[seq(j*2, length(idxs), by = j)] = F # excludes all multiples of j
-  primes <- as.numeric(which(idxs == T))
-  j <- primes[primes > j][1] # updates j to the next prime
+is_prime <- function(nr) {
+  if (nr == 2) {
+    return(T)
+  }
+  if (!any(nr %% 2:ceiling(sqrt(nr)) == 0L)) {
+    return(T)
+  }
+  return(F)
 }
+
+cands <- 2:(1e6-1)
+primes <- cands[unlist(sapply(cands, is_prime))]
 
 can_be_truncatable <- function(nr) {
   if (!any(unlist(strsplit(as.character(nr), "")) %in% c(0, 4, 6, 8))) {
