@@ -1,5 +1,4 @@
 # 19 | Counting Sundays
-# 
 # https://projecteuler.net/problem=19
 # 
 # You are given the following information, but you may prefer to do some 
@@ -15,7 +14,7 @@
 # How many Sundays fell on the first of the month during 
 # the twentieth century (1 Jan 1901 to 31 Dec 2000)?
 
-years <- 1901:2000 # excludes 2000 because it's an exception
+years <- 1901:2000
 
 dat <- data.frame()
 
@@ -34,6 +33,7 @@ for (year in years) {
   }
 }
 
+# Made some research and found that the 1st of January of 1901 was a Tuesday
 # Builds week_day for dat, starts on Tuesday (= 2)
 dat$week_day <- c(rep(c(2:7, 1), floor(nrow(dat) / 7)), 1:(nrow(dat) %% 7))
 
