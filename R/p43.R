@@ -17,7 +17,7 @@
 # d8d9d10=289 is divisible by 17
 # Find the sum of all 0 to 9 pandigital numbers with this property.
 
-cands <- 0123456789:9876543210
+# cands <- 0123456789:9876543210
 
 # But this is too much to test using the computer thus let's do it by hand
 
