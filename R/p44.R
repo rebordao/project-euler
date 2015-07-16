@@ -20,7 +20,6 @@ is_pent <- function(nr) {
   return(F)
 }
 
-
 # TODO: optimise the step below
 nr <- 2
 while (nr > 0) {
@@ -40,3 +39,5 @@ while (nr > 0) {
   }
   nr <- nr + 1
 }
+
+print(nr)
