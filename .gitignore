@@ -4,4 +4,4 @@
 .RData
 project_euler.Rproj
 .Rproj.user
-
+*.pyc

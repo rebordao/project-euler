@@ -13,7 +13,7 @@ solved some in R, Julia and Python.
 We value simplicity, memory efficiency, speed optimization, and - as much 
 as possible - using only built-in functions.
 
-R doesn’t support large integers and for that we had to use the package `gmp`.
+R doesn’t support large integers and for this we used the package `gmp`.
 
 ## Authors
 
