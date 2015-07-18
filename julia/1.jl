@@ -16,4 +16,3 @@ div_by_5 = 5 * [1:199]
 div_by_15 = 15 * [1:66]
 
 println(sum(div_by_3) + sum(div_by_5) - sum(div_by_15))
-
