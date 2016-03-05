@@ -1,5 +1,5 @@
 
-# This script sorts problems by their number of solution; in descending order.
+# This script sorts problems by their number of solutions; in descending order.
 
 library(XML)
 library(RCurl)
@@ -21,4 +21,4 @@ problems <- rbindlist(
   arrange(desc(solved_by))
 
 # Write into file
-write.table(problems, 'sorted_problems.csv', row.names = T)
+write.csv(problems, 'sorted_problems.csv', row.names = T)
