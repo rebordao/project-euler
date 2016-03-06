@@ -30,3 +30,4 @@ order. This is useful to see that people don't work in these problems sequential
 R and Julia solutions; Mathematical Optimization)
 - [Charalampos Papaloizou](https://github.com/papaloizouc) (
 Python solutions)
+- [Adriano Vinhas](https://github.com/avinhas) (Scala solutions)
