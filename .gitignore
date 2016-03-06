@@ -6,8 +6,12 @@
 project_euler.Rproj
 .Rproj.user
 *.pyc
+<<<<<<< HEAD
 =======
 p495.R
 .Rhistory
 
 >>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
+=======
+.idea
+>>>>>>> ef281ae... Added R solution to problem 52.

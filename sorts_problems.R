@@ -7,7 +7,7 @@ library(data.table)
 library(dplyr)
 
 # Build urls to scrap
-urls <- paste0(rep('https://projecteuler.net/archives;page=', 11), 1:11)
+urls <- paste0(rep('https://projecteuler.net/archives;page=', 12), 1:12)
 
 # Scrap urls, renames vars and orders by nr of solutions
 problems <- rbindlist(
