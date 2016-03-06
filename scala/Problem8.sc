@@ -33,16 +33,17 @@ object Problem8 {
                                                   //|  8, 1, 3, 5, 3, 3, 6, 2, 7, 6, 6, 1, 4, 2, 8, 2, 8, 0, 6, 4, 4, 4, 4, 8, 6,
                                                   //|  6, 4, 5, 2, 3, 8, 7, 4
                                                   //| Output exceeds cutoff limit.
+
                                         
 	def product(digits: List[Long]): Long = { digits.reduceLeft(_*_) }
                                                   //> product: (digits: List[Long])Long
+
 	
 	def maxProduct(serie: List[Long], tempMax: Long, nDigits: Int): Long = serie match {
 		case _ if(serie.length < nDigits) => tempMax
 		case _ => maxProduct(serie.drop(1), tempMax max product(serie.take(nDigits)), nDigits)
 	}                                         //> maxProduct: (serie: List[Long], tempMax: Long, nDigits: Int)Long
-	
-	Long.MaxValue                             //> res0: Long(9223372036854775807L) = 9223372036854775807
-	maxProduct(series, 0L, 13)                //> res1: Long = 23514624000
+
+	maxProduct(series, 0L, 13)                //> res0: Long = 23514624000
 	
 }

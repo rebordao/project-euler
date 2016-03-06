@@ -2,6 +2,7 @@ object Problem6 {
 	
 	def sumSquares(res: Int, number: Int): Int = { res+number*number }
                                                   //> sumSquares: (res: Int, number: Int)Int
+                                        
 	
 	def sumSquareDiff(naturalNumbers: Int): Int = {
 		val list = for(i<-1 to naturalNumbers) yield i
