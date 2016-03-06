@@ -7,7 +7,7 @@ library(data.table)
 library(dplyr)
 
 #### User-defined problems ####
-problems <- 56:56
+problems <- 11:11
 language <- 'scala' # needs to be either R, python, julia or scala
 
 #### Aux functions ####
@@ -69,7 +69,13 @@ create_file <- function(header = header, language = language) {
   problem_nr <- str_splited[which(str_splited == '|') - 1]
   
   # Creates file with header (if file doesn't exist)
-  file_name <- paste0(language, '/p', problem_nr, file_extension)
+  probl_nr_prefix <- switch(
+    language,
+    'R'      = 'p',
+    'python' = '',
+    'scala'  = 'Problem')
+  
+  file_name <- paste0(language, '/', probl_nr_prefix, problem_nr, file_extension)
   if (!file.exists(file_name)) {
     conn <- file(file_name)
     writeLines(text = header, con = conn)
