@@ -7,8 +7,8 @@ library(data.table)
 library(dplyr)
 
 #### User-defined problems ####
-problems <- 51:53
-language <- 'R' # needs to be either R, python, julia or scala
+problems <- 56:56
+language <- 'scala' # needs to be either R, python, julia or scala
 
 #### Aux functions ####
 
@@ -29,13 +29,21 @@ get_info <- function (url) {
 # Creates the header based on the output of get_info()
 create_header <- function(hd) {
   
-  # Enforces body to le less than 80 chars and adds heading #s (comment setup)
-  body <- paste0('# ', strwrap(hd$body, width = 75), '\n', collapse = '')
-  
+  # Defines comment symbol for the intended language
+  csym <- '#'
+  if (language == 'scala') {
+    csym <- '//'
+  }
+
   # Builds body
   url <- sprintf(
     'https://projecteuler.net/problem=%s', strsplit(hd$problem, ' ')[[1]][2])
-  sprintf("# %s | %s\n#\n# %s\n#\n%s#", hd$problem, hd$title, url, body)
+  
+  # Enforces body to be less than 80 chars and adds heading #s (comment setup)
+  body <- paste0(csym, ' ', strwrap(hd$body, width = 75), '\n', collapse = '')
+    
+  sprintf("%s %s | %s\n%s\n%s %s\n%s\n%s%s",
+    csym, hd$problem, hd$title, csym, csym, hd$title, csym, body, csym, csym)
 }
 
 # Creates files with headers for the intended language (R, python, julia, scala)
@@ -54,7 +62,7 @@ create_file <- function(header = header, language = language) {
     'R'      = '.R',
     'python' = '.py',
     'julia'  = '.jl',
-    'scala'  = '.scala')
+    'scala'  = '.sc')
   
   # Parses the problem number
   str_splited <- unlist(strsplit(header, ' '))
