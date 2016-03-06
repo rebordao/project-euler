@@ -22,7 +22,6 @@ object Problem8 {
                                 
                                         
 	def product(digits: List[Long]): Long = { digits.reduceLeft(_*_) }
-                                                  //> product: (digits: List[Long])Long
 
 	
 	def maxProduct(serie: List[Long], tempMax: Long, nDigits: Int): Long = serie match {
