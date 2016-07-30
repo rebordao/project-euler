@@ -1,9 +1,9 @@
 # 25 | 1000-digit Fibonacci number
 # The Fibonacci sequence is defined by the recurrence relation:
-#  
+#
 # Fn = Fn−1 + Fn−2, where F1 = 1 and F2 = 1.
 # Hence the first 12 terms will be:
-#   
+#
 # F1 = 1
 # F2 = 1
 # F3 = 2
@@ -27,7 +27,7 @@
 # - limit of a fibonacci sequence
 # - Binet's formula
 
-#### Limit of a fibonacci sequence
+#### Limit of a fibonacci sequence ####
 
 # The limit converges to round((golden_ratio ^ n) / sqrt(5))
 # Finding a digit with 1000 digits is the same as having a nr > 10^999
@@ -40,12 +40,12 @@
 golden_ratio = (1 + sqrt(5)) / 2
 print(round((log(10) * 999 + (log(5) / 2)) / log(golden_ratio)))
 
-#### Using Binet's formula
+#### Using Binet's formula ####
 
 # The following approach breaks for large numbers
 
 # library(gmp)
-# 
+#
 # get_fib_seq <- function(n, golden_ratio) {
 #   "
 #   Computes Fibonacci Sequence in Closed Form.
@@ -54,7 +54,7 @@ print(round((log(10) * 999 + (log(5) / 2)) / log(golden_ratio)))
 #   # Without big number support, this would not be possible
 #   as.bigz((golden_ratio^n - (-golden_ratio)^-n) / sqrt(5)) # Binet's formula
 # }
-# 
+#
 # nr <- 10
 # floor(log(get_fib_seq(1:100, golden_ratio), base = 10)) + 1
 
@@ -63,7 +63,7 @@ print(round((log(10) * 999 + (log(5) / 2)) / log(golden_ratio)))
 # http://fusharblog.com/solving-linear-recurrence-for-programming-contest/
 
 # library(expm) # for exponents of matrices
-# 
+#
 # ct <- 0
 # stop_criteria <- F
 # while (!stop_criteria) {

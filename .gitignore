@@ -1,5 +1,7 @@
 *.html
 .DS_Store
-p495.R
 .Rhistory
-
+.RData
+project_euler.Rproj
+.Rproj.user
+*.pyc

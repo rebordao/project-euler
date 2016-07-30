@@ -1,5 +1,4 @@
 # 11 | Largest product in a grid
-# 
 # https://projecteuler.net/problem=11
 # 
 # In the 20×20 grid below, four numbers along a diagonal line 
@@ -108,12 +107,12 @@ print(max(
   apply(nrs, 1, function(nrs_vec) get_prods(unlist(nrs_vec))),
   
   # Gets all producs for the cols
-  apply(nrs, 2, function(nrs_vec) get_prods(unlist(nrs_vec)))
+  apply(nrs, 2, function(nrs_vec) get_prods(unlist(nrs_vec))),
   
   # Gets all prods from the top-left to botton-right diagonals
   unlist(sapply(get_diags(nrs), function(vec) get_prods(unlist(vec)))),
   
   # Gets all prods from the top-right to botton-left diagonals
-  unlist(sapply(get_diags(nrs_rev), function(vec) get_prods(unlist(vec)))),
+  unlist(sapply(get_diags(nrs_rev), function(vec) get_prods(unlist(vec))))
   
 ))

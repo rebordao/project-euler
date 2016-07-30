@@ -1,5 +1,4 @@
 # 18 | Maximum path sum I
-# 
 # https://projecteuler.net/problem=18
 # 
 # By starting at the top of the triangle below and moving to adjacent 

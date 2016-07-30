@@ -14,15 +14,15 @@
 # 
 # What is the total of all the name scores in the file?
 
-# Imports input data, set working dir to folder project_euler
+# Imports input data, first set up the working dir to folder `project_euler`
 names <- sort(as.character(
   read.csv('./data/p22_names.txt', header = F, sep = ",", stringsAsFactors = F)))
 
 # Gets alphabetical values
-values <- sapply(strsplit(names, "", ""), function(name) {
-  sum(sapply(unlist(strsplit(unlist(name), "", "")), function(letter) {
+values <- sapply(strsplit(names, ""), function(name) {
+  sum(sapply(unlist(name), function(letter) {
     which(LETTERS %in% letter)
   }))
 })
 
-print(sum(value * 1:length(names)))
+print(sum(values * 1:length(names)))

@@ -1,5 +1,4 @@
 # 23 | Non-abundant sums
-# 
 # https://projecteuler.net/problem=23
 # 
 # A perfect number is a number for which the sum of its 
@@ -32,7 +31,7 @@ get_sum_divisors <- function(nr) {
   cands <- 2:floor(sqrt(nr))
   divs <- cands[nr %% cands == 0]
   divs <- divs[divs != 1 & divs != nr]
-  sum(unique(c(1, divs, nr / divs)))
+  return(sum(unique(c(1, divs, nr / divs))))
 }
 
 # Finds all abundant nrs

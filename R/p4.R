@@ -1,5 +1,4 @@
 # 4 | Largest palindrome product
-# 
 # https://projecteuler.net/problem=4
 # 
 # A palindromic number reads the same both ways. The largest 
@@ -11,7 +10,7 @@ nr1 <- 100:999
 nr2 <- 100:999
 
 # Computes all cases
-prod <- sapply(nr1, function(n) {n * nr2})
+prod <- sapply(nr1, function(n1) {n1 * nr2})
 prod[lower.tri(prod)] <- NA # removes the symetric cases
 
 # Writes the matrix into an array of unique elements
@@ -39,4 +38,11 @@ palindromes <- sapply(elements, function(element) {
   }
 })
 
-max(unlist(palindromes))
+print(max(unlist(palindromes)))
+
+#### Another Solution ####
+
+# There is an interesting solution that states that a palindromic number can be 
+# decomposed as pal = 100000x + 10000y + 1000z + 100z + 10y + x
+
+# TODO:

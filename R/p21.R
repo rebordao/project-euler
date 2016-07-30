@@ -1,5 +1,4 @@
 # 21 | Amicable numbers
-# 
 # https://projecteuler.net/problem=21
 # 
 # Let d(n) be defined as the sum of proper divisors of n 
@@ -14,12 +13,12 @@
 # Evaluate the sum of all the amicable numbers under 10000.
 
 print(sum(
-  unlist(sapply(2:10000, function(nr) {
+  unlist(sapply(2:9999, function(nr) {
   nrs <- 1:(nr-1)
-  b <- sum(nrs[nr %% nrs == 0])
+  b <- sum(nrs[which(nr %% nrs == 0)])
   nrs <- 1:(b-1)
   if (b > 1) { # perhaps this step can be made redundant
-    a <- sum(nrs[b %% nrs == 0])
+    a <- sum(nrs[which(b %% nrs == 0)])
     if (a == nr & a != b) {
       return(nr)
     }

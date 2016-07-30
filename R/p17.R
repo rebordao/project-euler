@@ -1,5 +1,4 @@
 # 17 | Number Letter Counts
-# 
 # https://projecteuler.net/problem=17
 # 
 # If the numbers 1 to 5 are written out in words: 

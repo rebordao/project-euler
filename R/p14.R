@@ -1,5 +1,4 @@
 # 14 | Longest Collatz sequence
-# 
 # https://projecteuler.net/problem=14
 # 
 # The following iterative sequence is defined for the set of positive integers:
@@ -36,10 +35,10 @@ comp_collatz_iters <- function(vect) {
     vect <- ifelse(
       vect == 1L, vect, ifelse(vect %% 2L == 0L, vect / 2L, vect * 3L + 1L))
   }
-  nr_iters
+  return(nr_iters)
 }
 
 # Computes result
-evil_nr <- 1e6 - 1
-nrs <- 1:evil_nr
-print(nrs[which.max(comp_collatz_iters(nrs))])
+cap <- 1e6 - 1
+nrs <- 1:cap
+print(which.max(comp_collatz_iters(nrs)))
