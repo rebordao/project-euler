@@ -102,9 +102,9 @@ def run():
     ]
     max_num = 150 * 1000000
 
-    s = 10
+    s = 0
 
-    for num in range(315400, max_num, 10):
+    for num in range(10, max_num, 10):
         squared = num * num
         if (squared % 9 == 0 or
             squared % 13 == 0 or
