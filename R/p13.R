@@ -1,4 +1,8 @@
 # 13 | Large Sum
+<<<<<<< HEAD
+=======
+# 
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=13
 # 
 # Work out the first ten digits of the sum of the following 

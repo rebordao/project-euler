@@ -1,4 +1,8 @@
 # 21 | Amicable numbers
+<<<<<<< HEAD
+=======
+# 
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=21
 # 
 # Let d(n) be defined as the sum of proper divisors of n 

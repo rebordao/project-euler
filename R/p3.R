@@ -1,8 +1,13 @@
 # 3 | Largest prime factor
+<<<<<<< HEAD
+=======
+# 
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=3
 # 
 # The prime factors of 13195 are 5, 7, 13 and 29.
 # What is the largest prime factor of the number 600851475143?
+<<<<<<< HEAD
 
 is_prime <- function(nr) {
   if (nr == 2L) {
@@ -13,6 +18,8 @@ is_prime <- function(nr) {
   }
   return(F)
 }
+=======
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 
 # Get factors of evil_nr
 evil_nr <- 600851475143L

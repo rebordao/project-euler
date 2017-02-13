@@ -1,4 +1,8 @@
 # 17 | Number Letter Counts
+<<<<<<< HEAD
+=======
+# 
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=17
 # 
 # If the numbers 1 to 5 are written out in words: 

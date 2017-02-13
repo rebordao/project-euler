@@ -1,4 +1,8 @@
 # 24 | Lexicographic permutations
+<<<<<<< HEAD
+=======
+# 
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=24
 # 
 # A permutation is an ordered arrangement of objects. 

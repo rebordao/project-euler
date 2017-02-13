@@ -1,4 +1,8 @@
 # 14 | Longest Collatz sequence
+<<<<<<< HEAD
+=======
+# 
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=14
 # 
 # The following iterative sequence is defined for the set of positive integers:

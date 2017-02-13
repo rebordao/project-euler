@@ -14,7 +14,11 @@
 # 
 # What is the total of all the name scores in the file?
 
+<<<<<<< HEAD
 # Imports input data, first set up the working dir to folder `project_euler`
+=======
+# Imports input data, set working dir to folder project_euler
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 names <- sort(as.character(
   read.csv('./data/p22_names.txt', header = F, sep = ",", stringsAsFactors = F)))
 

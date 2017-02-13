@@ -1,7 +1,13 @@
 *.html
 .DS_Store
+<<<<<<< HEAD
 .Rhistory
 .RData
 project_euler.Rproj
 .Rproj.user
 *.pyc
+=======
+p495.R
+.Rhistory
+
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.

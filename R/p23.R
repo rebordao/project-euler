@@ -1,4 +1,8 @@
 # 23 | Non-abundant sums
+<<<<<<< HEAD
+=======
+# 
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=23
 # 
 # A perfect number is a number for which the sum of its 

@@ -1,4 +1,8 @@
 # 4 | Largest palindrome product
+<<<<<<< HEAD
+=======
+# 
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=4
 # 
 # A palindromic number reads the same both ways. The largest 

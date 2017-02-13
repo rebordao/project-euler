@@ -1,4 +1,8 @@
 #### 15 | Lattice paths
+<<<<<<< HEAD
+=======
+# 
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=15
 # 
 # Starting in the top left corner of a 2×2 grid, and only being 
@@ -6,8 +10,12 @@
 # to the bottom right corner.
 # 
 # How many such routes are there through a 20×20 grid?
+<<<<<<< HEAD
 
 
+=======
+# 
+>>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # The article below is worth reading:
 # http://www.mozartreina.com/counting-lattice-paths.html
 # 
