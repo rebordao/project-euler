@@ -5,32 +5,45 @@
 #include <stdint.h>
 #include "btree.h"
 
-node* create_node(TREE_DATA_TYPE data) {
+
+int ull_compare_lower(node * left, node * right) {
+    int result = 0;
+    if(left->value._unsigned_long_long > right->value._unsigned_long_long) {
+        result = 1;
+    }
+    if(left->value._unsigned_long_long < right->value._unsigned_long_long) {
+        result = -1;
+    }
+    return result;
+}
+
+
+node * ull_create_node(ull value) {
+
     node *new_node = (node*) malloc(sizeof(node));
 
-    new_node->data = data;
+    new_node->type = TYPE_ULL;
+    new_node->value._unsigned_long_long = value;
     new_node->left = NULL;
     new_node->right = NULL;
 
     return new_node;
 }
 
-node* insert_node(node *root, TREE_DATA_TYPE data) {
+node* insert_node(node *root, node * new_node, compare_lower_func compare) {
  
     if(root == NULL) {
-        root = create_node(data);
         return root;
     } else {
-        TREE_DATA_TYPE right = 0;
+        int right = 0;
         boolean is_left  = false;
 
-        node* prev = NULL;
-        node* current_note = root;
+        node * prev = NULL;
+        node * current_note = root;
  
         while(current_note != NULL) {
-            right = compare_lower(data, current_note->data);
+            right = compare(new_node, current_note);
             prev = current_note;
-
 
             if(right < 0) {
                 is_left = true;
@@ -44,8 +57,6 @@ node* insert_node(node *root, TREE_DATA_TYPE data) {
  
         }
 
-         node *new_node = create_node(data);
-
         if(is_left) {
             prev->left = new_node;
         } else {
@@ -57,16 +68,16 @@ node* insert_node(node *root, TREE_DATA_TYPE data) {
     }
 }
 
-node* search(node *root,const TREE_DATA_TYPE data) {
+node* search(node *root, node * new_node, compare_lower_func compare) {
     if(root == NULL){
         return NULL;
     }
  
-    TREE_DATA_TYPE r;
+    int r;
     node* current_note = root;
 
     while(current_note != NULL) {
-        r = data < current_note->data;
+        r = compare(new_node, current_note);
         if(r < 0) {
             current_note = current_note->left;
         } else if(r > 0) {
@@ -88,4 +99,3 @@ void dispose(node* root)
         free(root);
     }
 }
-

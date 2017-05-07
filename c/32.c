@@ -9,28 +9,22 @@
 
 /* binary search tree */
 
-#define NUM_TYPE unsigned long long
+ull is_pandigital(ull *n) {
+    ull size_of_num = number_of_digits(*n);
 
-NUM_TYPE number_of_digits(NUM_TYPE *n) {
-    return (NUM_TYPE)round(log10((double) *n)) + 1;
-}
+    ull temp = *n;
+    ull count = 0;
 
-
-NUM_TYPE is_pandigital(NUM_TYPE *n) {
-    NUM_TYPE size_of_num = number_of_digits(n);
-
-    NUM_TYPE temp = *n;
-    NUM_TYPE count = 0;
-
-    node *root = create_node(size_of_num + 1);
+    node *root = ull_create_node(size_of_num + 1);
 
     while (temp > 0) {
-        NUM_TYPE digit = temp % 10;
+        ull digit = temp % 10;
         if (digit == 0) {
             dispose(root);
             return false;
         } else {
-            node * result = insert_node(root, digit);
+            node * new_node = ull_create_node(digit); 
+            node * result = insert_node(root, new_node, ull_compare_lower);
             if (result == NULL) {
                 dispose(root);
                 return false;
@@ -44,23 +38,25 @@ NUM_TYPE is_pandigital(NUM_TYPE *n) {
 
 
 int main() {
-
-    node * root = create_node(-1);
-    NUM_TYPE sum = 0;
+    node * root = ull_create_node(-1);
+    ull sum = 0;
 
     for (int i=0; i<9999; i++) {
         for (int j=0; j<9999; j++) {
             char buff[50];
             sprintf(buff, "%d%d%d", i,j,i*j);
-            NUM_TYPE nr = atoll(buff);
+            ull nr = atoll(buff);
 
             if (nr >= 1000000000) {
                 break;
             }
             if (is_pandigital(&nr) == true && nr >= 100000000 && nr <= 1000000000) {
-                node * result = insert_node(root, i * j);
+                node * new_node = ull_create_node(i * j); 
+                node * result = insert_node(root, new_node, ull_compare_lower);
                 if (result != NULL) {
                     sum += i*j;
+                } else {
+                    free(new_node);
                 }
             }
         }   
