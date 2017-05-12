@@ -1,48 +1,43 @@
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
 #include <stdint.h>
 
-#include "includes/btree.h"
+#include <glib.h>
 
+#include "includes/common.h"
 
-/* binary search tree */
 
 ull is_pandigital(ull *n) {
-    ull size_of_num = number_of_digits(*n);
-
     ull temp = *n;
-    ull count = 0;
-
-    node *root = ull_create_node(size_of_num + 1);
+    GTree * mytree = g_tree_new(glib_ull_compare);
 
     while (temp > 0) {
         ull digit = temp % 10;
         if (digit == 0) {
-            dispose(root);
+            g_tree_destroy(mytree);
             return false;
         } else {
-            node * new_node = ull_create_node(digit); 
-            node * result = insert_node(root, new_node, ull_compare_lower);
-            if (result == NULL) {
-                dispose(root);
-                return false;
-            }
+                gpointer result = g_tree_lookup (mytree,  PTR_CAST(digit));
+                if (result == NULL) {
+                    g_tree_insert (mytree,  PTR_CAST(digit),  PTR_CAST(digit));
+                } else {
+                    g_tree_destroy(mytree);
+                    return false;
+                }
         }
         temp /= 10;
     }
-    dispose(root);
+    g_tree_destroy(mytree);
     return true;
 }
 
 
 int main() {
-    node * root = ull_create_node(-1);
+    GTree * mytree = g_tree_new(glib_ull_compare);
+
     ull sum = 0;
 
     for (int i=0; i<9999; i++) {
         for (int j=0; j<9999; j++) {
+                
             char buff[50];
             sprintf(buff, "%d%d%d", i,j,i*j);
             ull nr = atoll(buff);
@@ -50,21 +45,23 @@ int main() {
             if (nr >= 1000000000) {
                 break;
             }
+
             if (is_pandigital(&nr) == true && nr >= 100000000 && nr <= 1000000000) {
-                node * new_node = ull_create_node(i * j); 
-                node * result = insert_node(root, new_node, ull_compare_lower);
-                if (result != NULL) {
-                    sum += i*j;
-                } else {
-                    free(new_node);
+                ull temp = i * j;
+                
+                gpointer result = g_tree_lookup (mytree,  PTR_CAST(temp));
+
+                if (result == NULL) {
+                    sum += temp;
+                    g_tree_insert (mytree,  PTR_CAST(temp),  PTR_CAST(temp));
+                    g_tree_ref (mytree);
                 }
             }
         }   
     }
 
     printf("%lld\n", sum);
-
-    dispose(root);
+    g_tree_destroy(mytree);
 
     return 0;
 }
