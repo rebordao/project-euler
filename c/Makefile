@@ -1,8 +1,14 @@
-c32:
-	gcc 32.c includes/btree.c -lm -o 32.o
+# example: make run problem=32
 
-r32:
-	gcc 32.c includes/btree.c -lm -o 32.o
+_glib = `pkg-config --cflags --libs glib-2.0`
 
-cr32:
-	gcc 32.c includes/btree.c -lm -o 32.o && ./32.o && rm 32.o
+internal_deps = includes/common.c includes/primes.c
+compile_and_run = gcc $(internal_deps) -Wall -o $(1).o $(1).c $(_glib) -lm && time ./$(1).o && rm $(1).o
+compile_and_run_mp = gcc $(internal_deps) -Wall -o $(1).o $(1).c $(_glib) -lm -fopenmp -lgomp && time ./$(1).o && rm $(1).o
+
+
+run:
+	$(call compile_and_run,$(problem))
+
+run_mp:
+	$(call compile_and_run_mp,$(problem))
