@@ -26,8 +26,8 @@ order. This is useful to see that people don't work in these problems sequential
 
 ## Authors
 
-- [Antonio Rebordao](https://www.linkedin.com/in/rebordao) (
-R and Julia solutions; Mathematical Optimization)
-- [Charalampos Papaloizou](https://github.com/papaloizouc) (
-Python solutions)
+- [Antonio Rebordao](
+https://www.linkedin.com/in/rebordao) (R and Julia solutions; Mathematical Optimisation)
+- [Charalampos Papaloizou](
+https://github.com/papaloizouc) (Python solutions; Mathematical Optimisation)
 - [Adriano Vinhas](https://github.com/avinhas) (Scala solutions)

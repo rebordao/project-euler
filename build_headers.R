@@ -7,8 +7,8 @@ library(data.table)
 library(dplyr)
 
 #### User-defined problems ####
-problems <- 11:11
-language <- 'scala' # needs to be either R, python, julia or scala
+problems <- 85:85
+language <- 'r' # needs to be either r, python, julia or scala
 
 #### Aux functions ####
 
@@ -50,7 +50,7 @@ create_header <- function(hd) {
 create_file <- function(header = header, language = language) {
   
   # Language needs to be supported
-  stopifnot(language %in% c('R', 'python', 'julia', 'scala'))
+  stopifnot(language %in% c('r', 'python', 'julia', 'scala'))
   
   # Creates dir if it doesn't exist
   if (!dir.exists(language)) {
@@ -59,14 +59,14 @@ create_file <- function(header = header, language = language) {
   
   file_extension <- switch(
     language, 
-    'R'      = '.R',
+    'r'      = '.R',
     'python' = '.py',
     'julia'  = '.jl',
     'scala'  = '.sc')
   
   # Parses the problem number
   str_splited <- unlist(strsplit(header, ' '))
-  problem_nr <- str_splited[which(str_splited == '|') - 1]
+  problem_nr <- str_splited[which(str_splited == 'Problem') + 1]
   
   # Creates file with header (if file doesn't exist)
   probl_nr_prefix <- switch(
