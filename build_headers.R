@@ -71,7 +71,7 @@ create_file <- function(header = header, language = language) {
   # Creates file with header (if file doesn't exist)
   probl_nr_prefix <- switch(
     language,
-    'R'      = 'p',
+    'r'      = 'p',
     'python' = '',
     'scala'  = 'Problem')
   
