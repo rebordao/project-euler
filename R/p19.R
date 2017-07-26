@@ -1,8 +1,4 @@
 # 19 | Counting Sundays
-<<<<<<< HEAD
-=======
-# 
->>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=19
 # 
 # You are given the following information, but you may prefer to do some 
@@ -18,11 +14,7 @@
 # How many Sundays fell on the first of the month during 
 # the twentieth century (1 Jan 1901 to 31 Dec 2000)?
 
-<<<<<<< HEAD
 years <- 1901:2000
-=======
-years <- 1901:2000 # excludes 2000 because it's an exception
->>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 
 dat <- data.frame()
 

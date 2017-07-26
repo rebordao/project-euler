@@ -1,5 +1,4 @@
 # 8 | Largest product in a series
-# 
 # https://projecteuler.net/problem=8
 # 
 # The four adjacent digits in the 1000-digit number that 

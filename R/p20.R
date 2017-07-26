@@ -1,8 +1,4 @@
 # 20 | Factorial digit sum
-<<<<<<< HEAD
-=======
-# 
->>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=20
 # 
 # n! means n × (n − 1) × ... × 3 × 2 × 1

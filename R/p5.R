@@ -1,27 +1,18 @@
 # 5 | Smallest multiple
-<<<<<<< HEAD
-=======
-# 
->>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=5
 # 
 # 2520 is the smallest number that can be divided by each of the numbers from 
 # 1 to 10 without any remainder. What is the smallest positive number that is 
 # evenly divisible by all of the numbers from 1 to 20?
 
-<<<<<<< HEAD
 #### Tweaked brute-force solution ####
 # takes 23 seconds in my 6 years-old laptop
-=======
-# Tweaked brute-force solution, only takes 32 seconds in my 6 years-old laptop
->>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 
 nr <- 20
 while (sum(nr %% 11:20) > 0L) {
   # if it's divisible by 14, 15, 16, 18 and 20, it's also by {1, 2, ..., 10}
   nr <- nr + 20L # checks only for multiples of 20
 }
-<<<<<<< HEAD
 print(nr)
 
 #### Prime Factorization ####
@@ -52,6 +43,3 @@ print(2 * 3 * 2 * 5 * 7 * 2 * 3 * 11 * 13 * 2 * 17 * 19)
 
 # How to do this programmatically?
 # TODO
-=======
-print(nr)
->>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.

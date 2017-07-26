@@ -1,8 +1,4 @@
 # 11 | Largest product in a grid
-<<<<<<< HEAD
-=======
-# 
->>>>>>> aa005b7... Added support to linebreaks if files are executed via command line.
 # https://projecteuler.net/problem=11
 # 
 # In the 20×20 grid below, four numbers along a diagonal line 
