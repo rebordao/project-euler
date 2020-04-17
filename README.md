@@ -4,15 +4,14 @@
 
 This repository has solutions to some problems of Project Euler.
 
-We sorted the problems by their number of solutions and started
-solving some of them in R, Python, Julia and Scala.
+Problems are sorted by their number of solutions and are made predominantly in R but also in Python, Julia and Scala.
 
 ## Strategy
 
-We value simplicity, memory efficiency, speed optimization, and - as much 
-as possible - using only built-in functions.
+Simplicity, memory efficiency, speed optimization are favoured and - as much 
+as possible - only built-in functions are used.
 
-R doesn’t support large integers and for this we had to use the package `gmp`.
+R doesn’t support large integers and for this I had to use the package `gmp`.
 
 # Utilities
 
@@ -23,11 +22,3 @@ There are two user-defined arguments:
     - language (R, Python, Julia, Scala).
 - `sorts_problems.R` sorts problems by their number of solutions; in descending
 order. This is useful to see that people don't work in these problems sequentially.
-
-## Authors
-
-- [Antonio Rebordao](
-https://www.linkedin.com/in/rebordao) (R and Julia solutions; Mathematical Optimisation)
-- [Charalampos Papaloizou](
-https://github.com/papaloizouc) (Python solutions; Mathematical Optimisation)
-- [Adriano Vinhas](https://github.com/avinhas) (Scala solutions)
